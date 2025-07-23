@@ -28,7 +28,7 @@ export const App = () => {
           <Route path="/rooms" element={<AllRooms />} />
           <Route path="/rooms/:id" element={<RoomDetails />} />
           <Route path="/my-bookings" element={<MyBookings />} />
-          <Route path="/owner" element={<LayOut />}></Route>
+          <Route path="/" element={<LayOut />}></Route>
           <Route  element= {<DashBoard />}/>
           <Route path='add-room' element= {<AddRoom/>}/>
           <Route path='list-room' element= {< ListRoom/>}/>
