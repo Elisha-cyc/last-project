@@ -29,7 +29,7 @@ export const App = () => {
           <Route path="/rooms/:id" element={<RoomDetails />} />
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/owner" element={<LayOut />}></Route>
-          <Route  element= {<DashBoard />}/>
+          <Route path='/owner/dashboard' element= {<DashBoard />}/>
           <Route path='add-room' element= {<AddRoom/>}/>
           <Route path='list-room' element= {< ListRoom/>}/>
         </Routes>
