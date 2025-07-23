@@ -9,6 +9,9 @@ import HotelReg from "./Components/HotelReg";
 import LayOut from "./Pages/HotelOwner/LayOut";
 import AppContext from "./context/CreateAppContext";
 import { useContext } from "react";
+import DashBoard from "./Pages/HotelOwner/DashBoard";
+import AddRoom from "./Pages/HotelOwner/AddRoom";
+import ListRoom from "./Pages/HotelOwner/ListRoom";
 
 export const App = () => {
   const isOwnerPath = useLocation().pathname.includes("Owner");
@@ -26,6 +29,9 @@ export const App = () => {
           <Route path="/rooms/:id" element={<RoomDetails />} />
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/owner" element={<LayOut />}></Route>
+          <Route index element= {<DashBoard />}/>
+          <Route path='add-room' element= {<AddRoom/>}/>
+          <Route path='list-room' element= {< ListRoom/>}/>
         </Routes>
       </div>
       <Footer />
