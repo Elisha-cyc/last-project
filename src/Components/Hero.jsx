@@ -78,8 +78,8 @@ export const Hero = () => {
           />
         </div>
 
-        <button className=" flex items-center justify-center gap-1 rounded-xl bg-black py-3 px-4 text-white my-auto cursor-pointer max-md:w-full max-md:py-1 ml-2 lg:px-8 mt-1  lg:w-[30.4rem] lg:-ml-[2px] ">
-          <img src={assets.searchIcon} alt="" className="h-10" />
+        <button className=" flex items-center justify-center gap-1 rounded-xl bg-black py-3 px-5 text-white my-auto cursor-pointer max-md:w-full max-md:py-1 ml-2 lg:px-8 mt-1  lg:w-[30.4rem] lg:-ml-[2px] ">
+          <img src={assets.searchIcon} alt="" className="lg:h-10 h-8" />
           <span className="text-2xl font-bold font-playfair">Search</span>
         </button>
       </form>
