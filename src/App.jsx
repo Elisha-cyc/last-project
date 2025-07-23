@@ -30,7 +30,7 @@ export const App = () => {
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/owner" element={<LayOut />}></Route>
           <Route path='/owner/dashboard' element= {<DashBoard />}/>
-          <Route path='add-room' element= {<AddRoom/>}/>
+          <Route path='/owner/add-room' element= {<AddRoom/>}/>
           <Route path='list-room' element= {< ListRoom/>}/>
         </Routes>
       </div>
