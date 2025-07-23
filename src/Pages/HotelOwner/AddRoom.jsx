@@ -22,7 +22,7 @@ const AddRoom = () => {
     })
   return (
     <div>
-       <form action="" className=''>
+       <form action="" className='pt-8 pr-5'>
             <Title align='left' font='outfit' title='Add Room' subTitle='Fill in the Details carefully and accurate room details, pricing and amenities to enhance the user booking experience'/>
             <p className="text-gray-800 mt-10">Images</p>
             <div className="grid grid-cols-2 sm:flex gap-4 my-2 flex-wrap">
