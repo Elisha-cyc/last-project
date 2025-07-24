@@ -18,8 +18,8 @@ export const App = () => {
   const { showHotelReg } = useContext(AppContext);
   return (
     <div>
-      {showHotelReg && <HotelReg /> }
-      
+      {showHotelReg && <HotelReg />}
+
       {!isOwnerPath && <Navbar />}
 
       <div className="min-h-[70vh]">
@@ -29,9 +29,10 @@ export const App = () => {
           <Route path="/rooms/:id" element={<RoomDetails />} />
           <Route path="/my-bookings" element={<MyBookings />} />
           <Route path="/owner" element={<LayOut />}>
-            <Route index element= {<DashBoard />}/>
-            <Route path='add-room' element= {<AddRoom/>}/>
-            <Route path='list-room' element= {< ListRoom/>}/>
+            <Route index element={<DashBoard />} />
+            <Route path="/owner/dashBoard" element={<DashBoard />} />
+            <Route path="/owner/addRoom" element={<AddRoom />} />
+            <Route path="/owner/listRoom" element={<ListRoom />} />
           </Route>
         </Routes>
       </div>
