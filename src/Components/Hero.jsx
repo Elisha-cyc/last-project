@@ -3,7 +3,7 @@ import { assets, cities } from "../assets/assets";
 
 export const Hero = () => {
   return (
-    <div className='flex flex-col lg-flex-row lg:flex-row  lg:items-center lg:w-full lg:justify-start items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroImage.png")] bg-no-repeat bg-cover bg-center h-screen'>
+    <div className='flex flex-col lg-flex-row lg:flex-row  lg:items-center lg:w-full lg:justify-between items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroImage.png")] bg-no-repeat bg-cover bg-center h-screen'>
       <div>
         <p className=" inline bg-[#293C4F]/50 px-3.5 py-1 rounded-full mt-20 lg:text-lg lg:my-5 lg:leading-relaxed ">
           Welcome to your Best Hotel Experience
@@ -18,22 +18,17 @@ export const Hero = () => {
       </div>
       <form
         className="bg-white/10 backdrop-blur-lg border border-white/20 text-sm md:text-base font-medium font-playfair
- rounded-2xl px-6 py-5 mt-8 flex lg:flex-col md:flex-row w-l max-md:items-start gap-4 max-md:mx-auto lg:ml-auto l"
+  rounded-2xl px-6 py-5 mt-8 flex flex-col md:flex-row lg:flex-col max-md:items-start gap-4  max-md:mx-auto w-full lg:w-[36%] max-w-sm md:max-w-3xl"
       >
-        <div>
-          <div className="flex items-center gap-2">
-            <label
-              htmlFor="destinationInput"
-              className=""
-            >
+        <div className="flex-1 w-full">
+          <label htmlFor="destinationInput" className="lg:text-2xl">
               Destination
             </label>
-          </div>
           <input
             list="destinations"
             id="destinationInput"
             type="text"
-            className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none lg:w-120 lg:text-2xl"
+            className="w-full  rounded border border-gray-200 px-3 py-2 mt-1.5 text-sm  lg:text-base outline-none"
             placeholder="Type here"
             required
           />
@@ -44,43 +39,45 @@ export const Hero = () => {
           </datalist>
         </div>
 
-        <div>
-          <div className="flex items-center gap-2">
-            <label htmlFor="checkIn">Check in</label>
-          </div>
+        <div className="flex-1 w-full">
+          <label htmlFor="checkIn" className="lg:text-2xl">
+            Check in
+          </label>
           <input
             id="checkIn"
             type="date"
-            className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm lg:w-120 lg:text-2xl outline-none"
+            className="w-full rounded border border-gray-200 px-3 py-2 lg:text-base mt-1.5 text-sm outline-none"
           />
         </div>
 
-        <div>
-          <div className="flex items-center gap-2">
-            <label htmlFor="checkOut">Check out</label>
-          </div>
+        <div className="flex-1 w-full">
+          <label htmlFor="checkOut" className="lg:text-2xl">
+            Check out
+          </label>
           <input
             id="checkOut"
             type="date"
-            className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm  lg:w-120 lg:text-2xl outline-none"
+            className="w-full rounded border border-gray-200 px-3 py-2 mt-1.5 lg:text-base text-sm outline-none"
           />
         </div>
 
-        <div className="flex md:flex-col max-md:gap-2 max-md:items-center">
-          <label htmlFor="guests">Guests</label>
+        <div className="w-full md:w-auto  flex flex-col items-start">
+          <label htmlFor="guests" className="lg:text-2xl">
+            Guests
+          </label>
           <input
             min={1}
             max={4}
             id="guests"
             type="number"
-            className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none  md:w-16 lg:w-120 lg:text-2xl"
+            className="w-full lg:w-[100%] md:w-16 rounded border border-gray-200 px-3 py-2 mt-1.5 text-sm outline-none"
             placeholder="0"
           />
         </div>
 
-        <button className=" flex items-center justify-center gap-1 rounded-xl bg-black py-3 px-5 text-white my-auto cursor-pointer max-md:w-full max-md:py-1 ml-2 lg:px-8 mt-1  lg:w-[30.4rem] lg:-ml-[2px] ">
-          <img src={assets.searchIcon} alt="" className="lg:h-10 h-8" />
-          <span className="text-2xl font-bold font-playfair">Search</span>
+        <button className="w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-black px-6 py-3 text-white font-bold text-xl font-playfair">
+          <img src={assets.searchIcon} alt="" className="h-8 md:h-10" />
+          <span>Search</span>
         </button>
       </form>
     </div>
