@@ -19,7 +19,7 @@ export const App = () => {
   return (
     <div>
       {showHotelReg && <HotelReg />}
-      
+
       {!isOwnerPath && <Navbar />}
 
       <div className="min-h-[70vh]">
@@ -28,10 +28,12 @@ export const App = () => {
           <Route path="/rooms" element={<AllRooms />} />
           <Route path="/rooms/:id" element={<RoomDetails />} />
           <Route path="/my-bookings" element={<MyBookings />} />
-          <Route path="/owner" element={<LayOut />}></Route>
-          <Route path="/owner/dashBoard" element={<DashBoard />} />
-          <Route path="/owner/addRoom" element={<AddRoom />} />
-          <Route path="/owner/listRoom" element={<ListRoom />} />
+          <Route path="/owner" element={<LayOut />}>
+            <Route index element={<DashBoard />} />
+            <Route path="/owner/dashBoard" element={<DashBoard />} />
+            <Route path="/owner/addRoom" element={<AddRoom />} />
+            <Route path="/owner/listRoom" element={<ListRoom />} />
+          </Route>
         </Routes>
       </div>
       <Footer />

@@ -6,7 +6,7 @@ const DashBoard = () => {
 
     const [dashboardData, setDashboardData] = useState(dashboardDummyData)
   return (
-    <div>
+    <div >
         <Title align='left' font='outfit' title='Dashboard'subTitle='Monitor your room listings, track booking and analyze revenue-all in one place. Stay updated with real-time insights to ensure smooth operations' />
         <div className="flex gap-4 my-8">
             <div className="bg-primary/3 border border-primary/10 rounded flex mb-10 pr-8">
